@@ -10,6 +10,8 @@ terraform {
 }
 
 provider "aws" {
+  access_key = "AKIASLNRY7HMOXE6OFWK"
+  secret_key = "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"
   region = "us-east-1"
 }
 
@@ -17,7 +19,7 @@ resource "aws_security_group" "sg" {
   name = "allow-all-sg-2"
   ingress {
     cidr_blocks = [
-      "194.44.201.155/32"
+      "194.44.201.155/32" 
     ]
     from_port = 22
     to_port = 22

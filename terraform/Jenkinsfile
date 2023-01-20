@@ -14,7 +14,7 @@ pipeline {
         stage('Deploy')
         {
             steps {
-                dir('devops/coursework/app') {
+                dir('devops/app') {
                     sh "JENKINS_NODE_COOKIE=dontKill nohup npm run dev &"
                 }
             }
