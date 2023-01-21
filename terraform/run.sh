@@ -10,5 +10,5 @@ sudo systemctl enable docker
 sudo groupadd docker
 sudo usermod -aG docker ubuntu
 
-sudo docker pull olehviernik/devops-course-work
-sudo docker run -p 8080:8080 -p 3000:3000 -t olehviernik/devops-course-work
+sudo docker pull olehviernik/devops-course-work:firsttry
+sudo docker run -p 8080:8080 -p 3000:3000 -t olehviernik/devops-course-work:firsttry
