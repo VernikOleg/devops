@@ -10,8 +10,8 @@ terraform {
 }
 
 provider "aws" {
-  access_key = "AKIASLNRY7HMOXE6OFWK"
-  secret_key = "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"
+  access_key = ""
+  secret_key = ""
   region = "us-east-1"
 }
 
@@ -56,7 +56,7 @@ resource "aws_key_pair" "deployer" {
 }
 
 resource "aws_instance" "app_server" {
-  ami             = "ami-0b0ea68c435eb488d"
+  ami             = "ami-04b3c39a8a1c62b76"
   instance_type   = "t2.micro"
   key_name        = aws_key_pair.deployer.id
   vpc_security_group_ids = [aws_security_group.sg.id]
