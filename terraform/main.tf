@@ -16,7 +16,7 @@ provider "aws" {
 }
 
 resource "aws_security_group" "sg" {
-  name = "allow-all-sg-2"
+  name = "allow-all-sg-2023"
   ingress {
     cidr_blocks = [
       "194.44.201.155/32" 
@@ -56,7 +56,7 @@ resource "aws_key_pair" "deployer" {
 }
 
 resource "aws_instance" "app_server" {
-  ami             = "ami-04b3c39a8a1c62b76"
+  ami             = "ami-0b0ea68c435eb488d"
   instance_type   = "t2.micro"
   key_name        = aws_key_pair.deployer.id
   vpc_security_group_ids = [aws_security_group.sg.id]
